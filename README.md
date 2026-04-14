@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Research Portfolio – PV Systems, Machine Learning & Data Science
 
-## Getting Started
+A modern personal research portfolio built with **Next.js, TypeScript, and Tailwind CSS**, showcasing work in **solar photovoltaic systems, unsupervised anomaly detection, and data-driven energy analytics**.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+(Coming soon / add your Vercel link here)
+
+---
+
+## 📌 Overview
+
+This project is a professional research portfolio designed to present my work in:
+
+- 🔆 Solar PV system analysis
+- 📊 Unsupervised anomaly detection in real-world datasets
+- 🤖 Machine learning for energy systems
+- 📉 Data quality engineering and downstream analysis
+- 🧪 Applied computational modeling and scientific data science
+
+The goal is to communicate both **research depth** and **practical data science applications** in a clean, modern web interface.
+
+---
+
+## 🧠 Key Features
+
+- ⚡ Fast and responsive UI (Next.js App Router)
+- 🎨 Clean, research-focused design (Tailwind CSS)
+- 📁 Modular project structure
+- 📊 Dedicated sections for projects, about, and contact
+- 🔍 Highlight on PV anomaly detection and data-driven methods
+- 🌐 Ready for deployment on Vercel
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Version Control:** Git + GitHub
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/
+├── app/
+│   ├── page.tsx              # Home page
+│   ├── about/page.tsx        # About section
+│   ├── projects/page.tsx     # Research projects
+│   ├── contact/page.tsx      # Contact page
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── ProjectCard.tsx
+│
+public/
