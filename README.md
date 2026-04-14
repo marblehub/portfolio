@@ -5,7 +5,7 @@ A modern personal research portfolio built with **Next.js, TypeScript, and Tailw
 ---
 
 ## 🚀 Live Demo
-(Coming soon / add your Vercel link here)
+[Demo](https://portfolio-silk-two-18.vercel.app/)
 
 ---
 
