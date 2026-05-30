@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/site";
+
 export default function Contact() {
   const links = [
     {
@@ -37,7 +39,12 @@ export default function Contact() {
         anomaly detection, or data science projects.
       </p>
 
-      <a href="whyte-goodfriend-cv.pdf" className="btn-primary" target="_blank" rel="noreferrer">
+      <a
+        href={assetPath("/whyte-goodfriend-cv.pdf")}
+        className="btn-primary"
+        target="_blank"
+        rel="noreferrer"
+      >
         Download CV
       </a>
 

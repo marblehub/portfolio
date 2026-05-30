@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetPath } from "@/lib/site";
 
 const highlights = [
   {
@@ -48,7 +49,7 @@ export default function Home() {
             View projects
           </Link>
           <a
-            href="whyte-goodfriend-cv.pdf"
+            href={assetPath("/whyte-goodfriend-cv.pdf")}
             className="btn-secondary"
             target="_blank"
             rel="noreferrer"
