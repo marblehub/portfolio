@@ -1,16 +1,27 @@
 import Link from "next/link";
 
 export default function Navbar() {
-  return (
-    <nav className="border-b border-slate-200">
-      <div className="max-w-5xl mx-auto p-4 flex justify-between">
-        <h1 className="font-bold">Whyte Goodfriend M. Research</h1>
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/publications", label: "Publications" },
+    { href: "/contact", label: "Contact" },
+  ];
 
-        <div className="flex gap-6 text-sm">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
+  return (
+    <nav className="sticky top-0 z-20 border-b border-border bg-background/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+        <Link href="/" className="font-semibold text-foreground">
+          Whyte Goodfriend M.
+        </Link>
+
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="hover:text-accent">
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

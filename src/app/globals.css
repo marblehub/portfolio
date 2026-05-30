@@ -1,50 +1,36 @@
 @import "tailwindcss";
 
-/* =========================
-   THEME VARIABLES
-   ========================= */
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  --muted: #6b7280; /* gray-500 */
-  --border: #e5e7eb; /* gray-200 */
-  --accent: #2563eb; /* blue-600 */
+  --background: #f6fbf8;
+  --foreground: #102019;
+  --muted: #557066;
+  --border: #d7e4dd;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --surface: #ffffff;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-
-    --muted: #9ca3af; /* gray-400 */
-    --border: #1f2937; /* gray-800 */
-    --accent: #60a5fa; /* blue-400 */
-  }
-}
-
-/* =========================
-   TAILWIND THEME HOOK
-   ========================= */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
 }
 
-/* =========================
-   BASE STYLES
-   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 28rem),
+    var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.65;
@@ -52,108 +38,79 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Better headings */
-h1, h2, h3, h4 {
-  letter-spacing: -0.02em;
-  font-weight: 600;
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0;
 }
-
-/* Paragraph readability */
-p {
-  color: var(--muted);
-}
-
-/* =========================
-   LINKS
-   ========================= */
 
 a {
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
-a:hover {
-  color: var(--accent);
-}
-
-/* =========================
-   GLOBAL UTILITY HELPERS
-   ========================= */
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Section spacing for research pages */
 section {
-  padding: 3.5rem 0;
+  padding: 3rem 0;
 }
-
-/* Subtle divider */
-hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 2rem 0;
-}
-
-/* =========================
-   CARD SYSTEM (IMPORTANT)
-   ========================= */
 
 .card {
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
   padding: 1.25rem;
-  background: transparent;
-  transition: all 0.2s ease;
+  box-shadow: 0 10px 30px rgba(16, 32, 25, 0.05);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .card:hover {
+  border-color: rgba(15, 118, 110, 0.42);
+  box-shadow: 0 14px 40px rgba(16, 32, 25, 0.08);
   transform: translateY(-2px);
+}
+
+.section-kicker {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-strong);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--foreground);
+}
+
+.btn-secondary:hover {
   border-color: var(--accent);
-}
-
-/* =========================
-   BUTTON FEEL (GLOBAL)
-   ========================= */
-
-button {
-  transition: all 0.2s ease;
-}
-
-button:hover {
-  transform: translateY(-1px);
-}
-
-/* =========================
-   CODE STYLE (for ML/PV snippets)
-   ========================= */
-
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  background: rgba(127, 127, 127, 0.1);
-  padding: 0.2rem 0.4rem;
-  border-radius: 6px;
-  font-size: 0.9em;
-}
-
-/* =========================
-   SMOOTH ENTRY ANIMATION
-   ========================= */
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: var(--accent);
 }

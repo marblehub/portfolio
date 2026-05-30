@@ -1,18 +1,57 @@
 export default function Contact() {
-  return (
-    <section className="space-y-6">
-      <h1 className="text-3xl font-bold">Contact</h1>
+  const links = [
+    {
+      label: "Email",
+      value: "goodfriend.whyte@gmail.com",
+      href: "mailto:goodfriend.whyte@gmail.com",
+    },
+    {
+      label: "GitHub",
+      value: "github.com/marblehub",
+      href: "https://github.com/marblehub",
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/goodfriendwhyte",
+      href: "https://www.linkedin.com/in/goodfriendwhyte/",
+    },
+    {
+      label: "ResearchGate",
+      value: "researchgate.net/profile/goodfriendwhyte",
+      href: "https://www.researchgate.net/profile/goodfriendwhyte",
+    },
+  ];
 
-      <p className="text-slate-600">
+  return (
+    <section className="space-y-8">
+      <div className="max-w-3xl">
+        <p className="section-kicker">Contact</p>
+        <h1 className="mt-3 text-3xl font-bold text-foreground">
+          Let&apos;s talk about PV systems, anomaly detection, or applied data
+          science.
+        </h1>
+      </div>
+
+      <p className="max-w-2xl text-muted">
         Feel free to reach out for collaborations in PV systems,
         anomaly detection, or data science projects.
       </p>
 
-      <div className="p-4 border rounded-2xl">
-        <p>Email: goodfriend.whyte@gmail.com</p>
-        <p>Github: https://github.com/marblehub</p>
-        <p>LinkedIn: https://www.linkedin.com/in/goodfriendwhyte/</p>
-        <p>ResearchGate: researchgate.net/profile/goodfriendwhyte</p>
+      <div className="grid gap-4 md:grid-cols-2">
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="card block hover:border-accent"
+            target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+            rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
+          >
+            <span className="text-sm font-medium text-muted">{link.label}</span>
+            <span className="mt-1 block font-semibold text-foreground">
+              {link.value}
+            </span>
+          </a>
+        ))}
       </div>
     </section>
   );

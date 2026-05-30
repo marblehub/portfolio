@@ -1,9 +1,15 @@
 export default function About() {
   return (
-    <section className="space-y-8">
-      <h1 className="text-3xl font-bold">About Me</h1>
+    <section className="space-y-10">
+      <div className="max-w-3xl">
+        <p className="section-kicker">About</p>
+        <h1 className="mt-3 text-3xl font-bold text-foreground">
+          Researcher at the intersection of solar PV, machine learning, and
+          applied data science.
+        </h1>
+      </div>
 
-      <div className="space-y-4 text-slate-700 leading-relaxed">
+      <div className="max-w-4xl space-y-4 leading-relaxed text-muted">
         <p>
           I am a data-driven researcher working at the intersection of
           solar photovoltaic systems, machine learning, and integrated
@@ -32,19 +38,28 @@ export default function About() {
         </p>
       </div>
 
-      {/* Skills section */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="p-4 border rounded-2xl">
-          <h2 className="font-semibold">Technical Skills</h2>
-          <p className="text-sm text-slate-600">
-            Python, ML, PV analysis, Data science, Power BI
+      <div className="grid gap-4 md:grid-cols-3">
+        <div className="card">
+          <h2 className="font-semibold text-foreground">Technical Skills</h2>
+          <p className="mt-2 text-sm text-muted">
+            Python, machine learning, PV analysis, data science, SQL, Power BI,
+            FastAPI, and Git.
           </p>
         </div>
 
-        <div className="p-4 border rounded-2xl">
-          <h2 className="font-semibold">Research Focus</h2>
-          <p className="text-sm text-slate-600">
-            Anomaly detection, PV systems, photonics
+        <div className="card">
+          <h2 className="font-semibold text-foreground">Research Focus</h2>
+          <p className="mt-2 text-sm text-muted">
+            PV systems, anomaly detection, forecasting, thermal modeling, and
+            photonics.
+          </p>
+        </div>
+
+        <div className="card">
+          <h2 className="font-semibold text-foreground">Working Style</h2>
+          <p className="mt-2 text-sm text-muted">
+            I like research tools that are reproducible, readable, and useful
+            beyond a single experiment.
           </p>
         </div>
       </div>
