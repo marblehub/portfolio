@@ -31,6 +31,21 @@ const featuredProjects = [
   },
 ];
 
+const cvSignals = [
+  {
+    title: "Forschungszentrum Juelich",
+    text: "Scientific researcher on outdoor PV data processing, module-performance modeling, ML analysis, and peer-reviewed publication.",
+  },
+  {
+    title: "RWTH Aachen + UNN",
+    text: "Doctoral work in physics and energy, with prior solid-state/materials science and physics degrees from the University of Nigeria Nsukka.",
+  },
+  {
+    title: "Teaching + Conferences",
+    text: "University physics lecturing, student supervision, and presentations at international PV and nanotechnology conferences.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -94,6 +109,30 @@ export default function Home() {
             <article key={project.title} className="card">
               <h3 className="font-semibold text-foreground">{project.title}</h3>
               <p className="mt-2 text-sm text-muted">{project.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-6 py-10">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-3xl">
+            <p className="section-kicker">CV snapshot</p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground">
+              Research experience, teaching, and applied technical depth.
+            </h2>
+          </div>
+
+          <Link href="/experience" className="btn-secondary w-fit">
+            View experience
+          </Link>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {cvSignals.map((signal) => (
+            <article key={signal.title} className="card">
+              <h3 className="font-semibold text-foreground">{signal.title}</h3>
+              <p className="mt-2 text-sm text-muted">{signal.text}</p>
             </article>
           ))}
         </div>

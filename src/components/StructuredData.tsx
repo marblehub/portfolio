@@ -13,8 +13,17 @@ const jsonLd = {
     "Solar photovoltaics",
     "Machine learning",
     "PV anomaly detection",
+    "PV module modeling",
     "Energy analytics",
     "Data science",
+    "Scientific Python",
+    "Photovoltaic materials",
+  ],
+  alumniOf: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "University of Nigeria Nsukka",
+    },
   ],
 };
 

@@ -4,7 +4,14 @@ export const dynamic = "force-static";
 
 const siteUrl = "https://marblehub.github.io/portfolio";
 
-const routes = ["", "/about", "/projects", "/publications", "/contact"];
+const routes = [
+  "",
+  "/about",
+  "/experience",
+  "/projects",
+  "/publications",
+  "/contact",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
