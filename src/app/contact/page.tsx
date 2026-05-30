@@ -37,6 +37,10 @@ export default function Contact() {
         anomaly detection, or data science projects.
       </p>
 
+      <a href="whyte-goodfriend-cv.pdf" className="btn-primary" target="_blank" rel="noreferrer">
+        Download CV
+      </a>
+
       <div className="grid gap-4 md:grid-cols-2">
         {links.map((link) => (
           <a

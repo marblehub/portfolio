@@ -11,6 +11,14 @@ TypeScript, and Tailwind CSS.
 The GitHub Pages URL becomes active after the repository is configured to use
 GitHub Actions as the Pages source and the deploy workflow has completed.
 
+## Recommended GitHub Repository Settings
+
+Use these values in the repository About panel:
+
+- Description: `Research portfolio for solar PV, machine learning, and data science`
+- Website: `https://marblehub.github.io/portfolio/`
+- Topics: `portfolio`, `nextjs`, `typescript`, `tailwindcss`, `solar-energy`, `photovoltaics`, `machine-learning`, `data-science`
+
 ## What It Showcases
 
 - Solar PV system analysis
@@ -26,6 +34,16 @@ GitHub Actions as the Pages source and the deploy workflow has completed.
 - Tailwind CSS
 - GitHub Actions for GitHub Pages deployment
 - Vercel for the existing live deployment
+
+## Visibility Features
+
+- Custom project preview images
+- Social sharing image at `/og-image.png`
+- Open Graph and Twitter metadata
+- `robots.txt`
+- `sitemap.xml`
+- JSON-LD structured data for search engines
+- Downloadable CV at `/whyte-goodfriend-cv.pdf`
 
 ## Local Development
 

@@ -47,7 +47,12 @@ export default function Home() {
           <Link href="/projects" className="btn-primary">
             View projects
           </Link>
-          <a href="cv.pdf" className="btn-secondary" target="_blank" rel="noreferrer">
+          <a
+            href="whyte-goodfriend-cv.pdf"
+            className="btn-secondary"
+            target="_blank"
+            rel="noreferrer"
+          >
             Download CV
           </a>
           <a
