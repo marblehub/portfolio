@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local AI assistant instructions
+AGENTS.md
+CLAUDE.md
+
+# private CV source and legacy public filename
+/public/cv.pdf
+/public/*-private.pdf

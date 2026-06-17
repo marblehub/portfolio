@@ -1,64 +1,76 @@
-# Research Portfolio - PV Systems, Machine Learning & Data Science
+# Research Portfolio
 
-Personal research portfolio for Whyte Goodfriend M., built with Next.js,
-TypeScript, and Tailwind CSS.
+Personal research portfolio for **Whyte Goodfriend M.**, focused on solar
+photovoltaics, machine learning, data quality, and applied energy analytics.
 
-## Live Sites
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-4285F4?style=for-the-badge)](https://marblehub.github.io/portfolio/)
+[![Vercel](https://img.shields.io/badge/Vercel-Live-34A853?style=for-the-badge)](https://portfolio-silk-two-18.vercel.app/)
 
-- Vercel: https://portfolio-silk-two-18.vercel.app/
-- GitHub Pages: https://marblehub.github.io/portfolio/
+## Overview
 
-The GitHub Pages URL becomes active after the repository is configured to use
-GitHub Actions as the Pages source and the deploy workflow has completed.
+The site presents research experience, publications, and software projects at
+the intersection of photovoltaic systems and data science. It is designed as a
+fast, accessible static website that can be deployed consistently to GitHub
+Pages and Vercel.
 
-## Recommended GitHub Repository Settings
+## Highlights
 
-Use these values in the repository About panel:
+- Research experience in photovoltaic system modeling and outdoor PV analysis
+- Peer-reviewed publications and conference contributions
+- Machine-learning projects for forecasting, anomaly detection, and data quality
+- Applied AI tools with provenance, citations, and domain-specific workflows
+- Public-safe downloadable CV
+- Responsive project previews and social-sharing metadata
 
-- Description: `Research portfolio for solar PV, machine learning, and data science`
-- Website: `https://marblehub.github.io/portfolio/`
-- Topics: `portfolio`, `nextjs`, `typescript`, `tailwindcss`, `solar-energy`, `photovoltaics`, `machine-learning`, `data-science`
-
-## What It Showcases
-
-- Solar PV system analysis
-- Unsupervised anomaly detection in real-world PV datasets
-- Machine learning for energy-system forecasting and analytics
-- Data quality workflows for reliable downstream modeling
-- Research software and applied AI projects
-
-## Tech Stack
+## Technology
 
 - Next.js App Router
-- TypeScript
+- React and TypeScript
 - Tailwind CSS
-- GitHub Actions for GitHub Pages deployment
-- Vercel for the existing live deployment
+- Static export for GitHub Pages
+- GitHub Actions deployment
 
-## Visibility Features
+## Project Structure
 
-- Custom project preview images
-- Social sharing image at `/og-image.png`
-- Open Graph and Twitter metadata
-- `robots.txt`
-- `sitemap.xml`
-- JSON-LD structured data for search engines
-- Downloadable CV at `/whyte-goodfriend-cv.pdf`
+```text
+src/app/          Pages, metadata, sitemap, and robots configuration
+src/components/   Shared navigation, layout, and project components
+src/lib/          Site path helpers
+public/previews/  Project preview images
+public/           Social image and public-safe CV
+.github/workflows GitHub Pages deployment workflow
+```
 
 ## Local Development
 
+Requirements: Node.js 24 and npm.
+
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Open http://localhost:3000 to view the site.
+Open `http://localhost:3000` in a browser.
 
-## Production Build
+## Quality Checks
 
 ```bash
+npm run lint
 npm run build
 ```
 
-The app is configured for static export, so production output is written to
-`out/`.
+The production build is exported to `out/`.
+
+## Deployment
+
+Pushes to `main` trigger the GitHub Actions workflow in
+`.github/workflows/pages.yml`. The workflow installs dependencies, creates the
+static export, and publishes it to GitHub Pages.
+
+The Next.js configuration automatically applies the `/portfolio` base path
+during the GitHub Actions build while keeping local and Vercel routes unchanged.
+
+## Privacy
+
+Only a public-safe CV is included in this repository. Private contact details
+and private source documents are intentionally excluded from version control.

@@ -3,11 +3,6 @@ import { assetPath } from "@/lib/site";
 export default function Contact() {
   const links = [
     {
-      label: "Email",
-      value: "goodfriend.whyte@gmail.com",
-      href: "mailto:goodfriend.whyte@gmail.com",
-    },
-    {
       label: "GitHub",
       value: "github.com/marblehub",
       href: "https://github.com/marblehub",
@@ -54,8 +49,8 @@ export default function Contact() {
             key={link.href}
             href={link.href}
             className="card block hover:border-accent"
-            target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-            rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
+            target="_blank"
+            rel="noreferrer"
           >
             <span className="text-sm font-medium text-muted">{link.label}</span>
             <span className="mt-1 block font-semibold text-foreground">
